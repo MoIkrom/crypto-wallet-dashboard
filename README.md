@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h1 align="center"><u> Crypto Wallet </u></h1>
+<p align="left">
+<h2>Built with</h2>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Requirements](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
 
-## Available Scripts
+<br>
+ 
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+# **About Coffee Gayoe**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+_A React-based web application that allows users to connect their Ethereum wallet (MetaMask), view their ETH balance, and display real-time cryptocurrency prices from the CoinGecko API._
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Wallet Connection: Connect to MetaMask or other Web3 wallets
+- Wallet Information: Display connected wallet address
+- ETH Balance: Show the current ETH balance of the connected wallet
+- Cryptocurrency Prices: Display real-time prices of 5 popular cryptocurrencies (Bitcoin, Ethereum, Cardano, Solana, and Polkadot)
+- Price Updates: Automatically refresh cryptocurrency data every 60 seconds
+- Responsive Design: Works on desktop and mobile devices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+ Before running this application, make sure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or higher)
+- npm or Yarn
+- MetaMask browser extension or another Web3 wallet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage for development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Open your terminal or command prompt.
+2. Type `git clone https://github.com/MoIkrom/REACT---COFFEE-GAYOE.git`
+3. Open folder with your text editor.
+4. Start to edit and development.
 
-### `npm run eject`
+ 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Related Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Deployment site [`here`](https://react-coffee-gayoe-gosqvcz59-moikroms-projects.vercel.app/) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"><sub><b>&copy;2025 @Crypto Wallet</b></sub></p>
