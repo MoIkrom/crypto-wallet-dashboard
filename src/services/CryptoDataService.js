@@ -4,16 +4,8 @@ import axios from "axios";
 export const fetchCryptoData = async (cryptoIds) => {
   try {
     const response = await axios.get(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false",
-    //   {
-    //     params: {
-    //       ids: "bitcoin,ethereum,binancecoin,solana,cardano",
-    //       vs_currencies: "usd",
-    //     },
-    //   }
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
     );
-    console.log(response)
-
     return await response.data;
   } catch (error) {
     console.log("Error fetching cryptocurrency data:", error);

@@ -27,7 +27,6 @@ function App() {
   const loadCryptoData = async () => {
     try {
       const data = await fetchCryptoData(cryptoIds);
-      console.log(data);
       setCryptoData(data);
     } catch (err) {
       console.error("Error loading crypto data:", err);
@@ -130,7 +129,7 @@ function App() {
       </div>
 
       <div className="crypto-section">
-        <h2>Cryptocurrency Prices</h2>
+        <h2>Crypto Currency Prices</h2>
         {cryptoData.length > 0 ? (
           <table className="crypto-table">
             <thead>
