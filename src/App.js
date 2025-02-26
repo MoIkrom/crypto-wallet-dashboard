@@ -1,7 +1,7 @@
-// App.js
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { ethers } from "ethers";
+import { fetchCryptoData } from "./services/CryptoDataService";
 
 function App() {
   const [walletAddress, setWalletAddress] = useState("");
@@ -14,15 +14,24 @@ function App() {
   const cryptoIds = ["bitcoin", "ethereum", "cardano", "solana", "polkadot"];
 
   useEffect(() => {
-    fetchCryptoData();
+    loadCryptoData();
 
     // Fetch crypto prices every 60 seconds
     const interval = setInterval(() => {
-      fetchCryptoData();
+      loadCryptoData();
     }, 60000);
 
     return () => clearInterval(interval);
-  });
+  }, []);
+
+  const loadCryptoData = async () => {
+    try {
+      const data = await fetchCryptoData(cryptoIds);
+      setCryptoData(data);
+    } catch (err) {
+      console.error("Error loading crypto data:", err);
+    }
+  };
 
   // Function to connect wallet
   const connectWallet = async () => {
@@ -76,26 +85,6 @@ function App() {
       setEthBalance(ethers.utils.formatEther(balance));
     } catch (err) {
       console.error("Error fetching ETH balance:", err);
-    }
-  };
-
-  // Fetch cryptocurrency data from CoinGecko API
-  const fetchCryptoData = async () => {
-    try {
-      const response = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${cryptoIds.join(
-          ","
-        )}&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h`
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch crypto data");
-      }
-
-      const data = await response.json();
-      setCryptoData(data);
-    } catch (err) {
-      console.error("Error fetching crypto data:", err);
     }
   };
 
