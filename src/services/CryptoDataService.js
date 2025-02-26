@@ -1,18 +1,17 @@
 // Create a new file: src/services/CryptoDataService.js
+import axios from "axios";
 
 export const fetchCryptoData = async (cryptoIds) => {
   try {
-    // Use a CORS proxy to bypass CORS restrictions
-    const proxyUrl = "https://corsproxy.io/?";
-    const targetUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${cryptoIds.join(
-      ","
-    )}&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h`;
-
-    const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch crypto data");
-    }
+    const response = await axios.get(
+      "https://api.coingecko.com/api/v3/simple/price",
+      {
+        params: {
+          ids: "bitcoin,ethereum,binancecoin,solana,cardano",
+          vs_currencies: "usd",
+        },
+      }
+    );
 
     return await response.json();
   } catch (error) {
@@ -21,6 +20,27 @@ export const fetchCryptoData = async (cryptoIds) => {
     return getMockCryptoData();
   }
 };
+// export const fetchCryptoData = async (cryptoIds) => {
+//   try {
+//     // Use a CORS proxy to bypass CORS restrictions
+//     const proxyUrl = "https://corsproxy.io/?";
+//     const targetUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${cryptoIds.join(
+//       ","
+//     )}&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h`;
+
+//     const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch crypto data");
+//     }
+
+//     return await response.json();
+//   } catch (error) {
+//     console.error("Error fetching cryptocurrency data:", error);
+//     // Return mock data as fallback
+//     return getMockCryptoData();
+//   }
+// };
 
 // Mock data to use as fallback when API fails
 const getMockCryptoData = () => {

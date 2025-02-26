@@ -27,6 +27,7 @@ function App() {
   const loadCryptoData = async () => {
     try {
       const data = await fetchCryptoData(cryptoIds);
+      console.log(data)
       setCryptoData(data);
     } catch (err) {
       console.error("Error loading crypto data:", err);
