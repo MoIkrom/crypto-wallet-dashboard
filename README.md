@@ -44,6 +44,6 @@ _A React-based web application that allows users to connect their Ethereum walle
 
 ## Related Project
 
-- Deployment site [`here`](https://react-coffee-gayoe-gosqvcz59-moikroms-projects.vercel.app/) 
+- Deployment site [`here`](https://crypto-wallet-dashboard-six.vercel.app/) 
 
 <p align="center"><sub><b>&copy;2025 @Crypto Wallet</b></sub></p>
