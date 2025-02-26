@@ -34,9 +34,11 @@ _A React-based web application that allows users to connect their Ethereum walle
 ## Usage for development
 
 1. Open your terminal or command prompt.
-2. Type `git clone https://github.com/MoIkrom/REACT---COFFEE-GAYOE.git`
+2. Type `git clone https://github.com/MoIkrom/crypto-wallet-dashboard.git`
 3. Open folder with your text editor.
-4. Start to edit and development.
+4. Type `cd crypto-wallet-dashboard` on your terminal
+5. Type `npm Install` to Install dependencies
+6. Type `npm start` to Start the development server
 
  
 
