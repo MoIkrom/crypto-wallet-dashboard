@@ -22,12 +22,12 @@ function App() {
     }, 60000);
 
     return () => clearInterval(interval);
-  }, []);
+  },[]);
 
   const loadCryptoData = async () => {
     try {
       const data = await fetchCryptoData(cryptoIds);
-      console.log(data)
+      console.log(data);
       setCryptoData(data);
     } catch (err) {
       console.error("Error loading crypto data:", err);
